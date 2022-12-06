@@ -4,7 +4,7 @@
  */
 exports.up = function(knex) {
   return knex.schema.createTable('recipe', (table) => {
-    table.integer('idMeal').primary();
+    table.uuid('idMeal').primary();
     table.string('strMeal').notNullable();
     table.string('strCategory').notNullable();
     table.string('strArea').notNullable();
