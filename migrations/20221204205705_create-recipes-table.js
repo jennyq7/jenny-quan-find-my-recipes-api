@@ -8,9 +8,10 @@ exports.up = function(knex) {
     table.string('recipe_name').notNullable();
     table.string('recipe_types').notNullable();
     table.string('recipe_description').notNullable();
-    table.string('strInstuctions').notNullable();
+    table.string('directions').notNullable();
     table.string('recipe_image').notNullable();
-    table.string
+    table.string('cooking_time_min').notNullable();
+    table.string('ingredients').notNullable();
   });
 };
 

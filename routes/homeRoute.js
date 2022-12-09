@@ -10,4 +10,8 @@ router
     .route("/:id")
     .get(recipeController.oneRecipe);
 
+router
+    .route('/add')
+    .post(recipeController.addRecipe);    
+
 module.exports = router;
