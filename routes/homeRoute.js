@@ -6,4 +6,8 @@ router
     .route("/")
     .get(recipeController.index);
 
+router
+    .route("/:id")
+    .get(recipeController.oneRecipe);
+
 module.exports = router;
