@@ -12,6 +12,11 @@ router
 
 router
     .route('/add')
-    .post(recipeController.addRecipe);    
+    .post(recipeController.addRecipe);  
+    
+router
+    .route('/saved')
+    .post(recipeController.saveRecipe)
+    .get(recipeController.storedRecipes);
 
 module.exports = router;

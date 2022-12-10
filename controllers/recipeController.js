@@ -28,8 +28,31 @@ exports.oneRecipe = async (req, res) => {
   
 }
 exports.addRecipe = async (req, res) => {
-    const newRecipe = req.body;
+  try {  const newRecipe = req.body;
      newRecipe.id = uuidv4();
     const data = await knex('recipe').insert(newRecipe);
+  } catch (err) {
+    res.status(400).send('Missing information');
+  }
+}
 
+exports.saveRecipe = async (req, res) => {
+  try {  const saved = req.body;
+   
+    const data = await knex('recipe').insert(saved);
+    res.status(201).send('The recipe has been saved');
+} catch (err) {
+    res.status(400).send(`Error:${err}`)
+}
+}
+
+exports.storedRecipes = async (req, res) => {
+    try {
+        const data = await knex("recipe").select("recipe_id");
+        console.log(data);
+        res.status(200).json(data);
+  
+    } catch (err) {
+        res.status(400).send(`Error:${err}`)
+    }
 }
