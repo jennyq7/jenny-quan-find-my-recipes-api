@@ -7,7 +7,7 @@ router
     .get(recipeController.index);
 
 router
-    .route("/:id")
+    .route("/id/:id")
     .get(recipeController.oneRecipe);
 
 router

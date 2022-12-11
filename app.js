@@ -10,6 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/recipes", homeRoutes);
+app.use('/images', express.static('./public/images'))
 
 app.listen(PORT, () => {
     console.log(`test running on ${PORT}`);
