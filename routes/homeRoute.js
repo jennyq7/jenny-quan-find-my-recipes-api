@@ -12,7 +12,8 @@ router
 
 router
     .route('/add')
-    .post(recipeController.addRecipe);  
+    .post(recipeController.addRecipe)
+    .get(recipeController.getNewRecipe);
     
 router
     .route('/saved')

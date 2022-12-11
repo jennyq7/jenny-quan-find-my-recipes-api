@@ -28,13 +28,46 @@ exports.oneRecipe = async (req, res) => {
   
 }
 exports.addRecipe = async (req, res) => {
+    console.log(req.body)
+    if (
+        !req.body.recipe_name ||
+        !req.body.recipe_description ||
+        !req.body.recipe_types ||
+        !req.body.directions ||
+        !req.body.cooking_time_min ||
+        !req.body.ingredients
+      )  
+      {
+        return res
+          .status(400)
+          .send("Please make sure to fill out the form completely");
+      }
   try {  const newRecipe = req.body;
-     newRecipe.id = uuidv4();
+     newRecipe.recipe_id = uuidv4();
+     newRecipe.recipe_image = '../public/images/recipe.jpg';
     const data = await knex('recipe').insert(newRecipe);
   } catch (err) {
-    res.status(400).send('Missing information');
+    res.status(400).send(`Missing information: ${err}`);
   }
 }
+
+
+exports.getNewRecipe = async (req, res) => {
+    try {
+        const recipeData = await knex('recipe').select(
+            "recipe_id",
+            "recipe_name",
+            "recipe_description",
+            "recipe_types",
+            "directions",
+            "cooking_time_min",
+            "ingredients",
+            "recipe_image"
+        );
+        res.status(200).json(recipeData);
+    } catch (err) {`Error retrieving data: ${err}`};
+}
+
 
 exports.saveRecipe = async (req, res) => {
   try {  const saved = req.body;
@@ -49,7 +82,7 @@ exports.saveRecipe = async (req, res) => {
 exports.storedRecipes = async (req, res) => {
     try {
         const data = await knex("recipe").select("recipe_id");
-        console.log(data);
+       
         res.status(200).json(data);
   
     } catch (err) {
