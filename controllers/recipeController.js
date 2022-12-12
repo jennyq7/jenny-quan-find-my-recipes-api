@@ -48,8 +48,9 @@ exports.addRecipe = async (req, res) => {
     try {
         const newRecipe = req.body;
         newRecipe.recipe_id = uuidv4();
-        newRecipe.recipe_image = 'http://localhost:8080/images/recipe.jpg';
+        newRecipe.recipe_image = '/images/recipe.jpg';
         const data = await knex('recipe').insert(newRecipe);
+        res.status(201).json(data);
     } catch (err) {
         res.status(400).send(`Missing information: ${err}`);
     }
