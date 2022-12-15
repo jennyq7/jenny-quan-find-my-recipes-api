@@ -45,6 +45,8 @@ Then in the Headers tab in Postman or VS Code (whichever app you use) add a head
 
 Then in your FatSecret account go to your profile, Manage API keys, and click on the app you created. Under Allowed IP Addresses add your IP address or it will not return data.
 
+Then from here you only need to replace the Access token in the headers whenever you get a new one.
+
 ## Usage/examples
 
 ```javascript
