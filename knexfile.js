@@ -10,6 +10,7 @@ module.exports = {
     charset: 'utf8',
     database: "recipes",
     user: "root",
-    password: "rootroot"
+    password: "rootroot",
+    port: "3306"
    }
 };
