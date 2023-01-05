@@ -6,10 +6,11 @@
 module.exports = {
   client: 'mysql',
   connection: {
-    host: 'mysql-wjvs:3306',
+    host: 'mysql-wjvs',
     charset: 'utf8',
     database: "recipes",
     user: "root",
-    password: "rootroot"
+    password: "rootroot",
+    port: "3306"
    }
 };
