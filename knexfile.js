@@ -11,5 +11,6 @@ module.exports = {
     database: "recipes",
     user: "root",
     password: "rootroot",
+    port: "8080"
    }
 };
