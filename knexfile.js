@@ -10,7 +10,7 @@ module.exports = {
     charset: 'utf8',
     database: "mysql",
     user: "mysql",
-    password: "aD8gQDd3OPCN1S4R71xCCj663fZ3j6In"
+    password: "Td0WgfWWHBjdbmMkcWuNgcUiqz2S15bC"
    }
 };
 
