@@ -6,12 +6,11 @@
 module.exports = {
   client: 'mysql',
   connection: {
-    host: 'mysql-wjvs',
+    host: 'mysql-kpiq',
     charset: 'utf8',
     database: "mysql",
     user: "mysql",
-    password: "WNIs908So7PAMpTRVXNjZ1THzA3YuWbH",
-    port: "3306"
+    password: "aD8gQDd3OPCN1S4R71xCCj663fZ3j6In"
    }
 };
 
