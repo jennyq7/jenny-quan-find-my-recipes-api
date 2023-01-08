@@ -45,9 +45,8 @@ exports.addRecipe = async (req, res) => {
             .send("Please make sure to fill out the form completely");
     }
     try {
-        let imageData = req.files.image.data;
-        let imageName = req.files.image.name;
-        console.log(imageName);
+        let imageData = req.files.file.data;
+        let imageName = req.files.file.name;
         let fileName = uuidv4() + "-" + imageName;
         let actualStaticFilePath = './public/images/' + fileName;
         let servedFilePath = "/images/" + fileName;
