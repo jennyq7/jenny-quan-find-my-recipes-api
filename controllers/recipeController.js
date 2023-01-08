@@ -47,6 +47,7 @@ exports.addRecipe = async (req, res) => {
     try {
         let imageData = req.files.image.data;
         let imageName = req.files.image.name;
+        console.log(imageName);
         let fileName = uuidv4() + "-" + imageName;
         let actualStaticFilePath = './public/images/' + fileName;
         let servedFilePath = "/images/" + fileName;
