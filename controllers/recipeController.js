@@ -1,6 +1,8 @@
 const knex = require("knex")(require("../knexfile"));
 const { v4: uuidv4 } = require('uuid');
 const axios = require("axios");
+const fs = require("fs");
+
 
 //function to get all data on homepage
 exports.index = async (req, res) => {
@@ -36,17 +38,24 @@ exports.addRecipe = async (req, res) => {
         !req.body.recipe_types ||
         !req.body.directions ||
         !req.body.cooking_time_min ||
-        !req.body.ingredients ||
-        !req.body.recipe_image
+        !req.body.ingredients 
     ) {
         return res
             .status(400)
             .send("Please make sure to fill out the form completely");
     }
     try {
+        let imageData = req.files.image.data;
+        let imageName = req.files.image.name;
+        let fileName = uuidv4() + "-" + imageName;
+        let actualStaticFilePath = './public/images/' + fileName;
+        let servedFilePath = "/images/" + fileName;
+        let servedURL = 'https://recipe-box-backend.onrender.com' + servedFilePath;
+        fs.writeFileSync(actualStaticFilePath, imageData);
+        
         const newRecipe = req.body;
         newRecipe.recipe_id = uuidv4();
-        newRecipe.recipe_image = '/images/recipe.jpg';
+        newRecipe.recipe_image = servedURL;
         const data = await knex('recipe').insert(newRecipe);
         res.status(201).json(data);
     } catch (err) {
