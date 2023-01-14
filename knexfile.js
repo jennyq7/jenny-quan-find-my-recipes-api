@@ -14,7 +14,7 @@ module.exports = {
    }
 };
 
-//module.exports = {
+// module.exports = {
 //   client: 'mysql',
 //   connection: {
 //     host: 'mysql-wjvs',

@@ -45,17 +45,18 @@ exports.addRecipe = async (req, res) => {
             .send("Please make sure to fill out the form completely");
     }
     try {
-        let imageData = req.files.file.data;
-        let imageName = req.files.file.name;
-        let fileName = uuidv4() + "-" + imageName;
-        let actualStaticFilePath = './public/images/' + fileName;
-        let servedFilePath = "/images/" + fileName;
-        let servedURL = 'https://recipe-box-backend.onrender.com' + servedFilePath;
-        fs.writeFileSync(actualStaticFilePath, imageData);
+        // let imageData = req.files.file.data;
+        // let imageName = req.files.file.name;
+        // let fileName = uuidv4() + "-" + imageName;
+        // let actualStaticFilePath = './public/images/' + fileName;
+        // let servedFilePath = "/images/" + fileName;
+        // let servedURL = 'https://recipe-box-backend.onrender.com' + servedFilePath;
+        // fs.writeFileSync(actualStaticFilePath, imageData);
         
         const newRecipe = req.body;
         newRecipe.recipe_id = uuidv4();
-        newRecipe.recipe_image = servedURL;
+        newRecipe.recipe_image = '/images/';
+        //newRecipe.recipe_image = servedURL;
         const data = await knex('recipe').insert(newRecipe);
         res.status(201).json(data);
     } catch (err) {
