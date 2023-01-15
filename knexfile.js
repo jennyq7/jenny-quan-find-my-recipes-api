@@ -3,25 +3,25 @@
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
+// module.exports = {
+//   client: 'mysql',
+//   connection: {
+//     host: 'mysql-kpiq',
+//     charset: 'utf8',
+//     database: "mysql",
+//     user: "mysql",
+//     password: "Td0WgfWWHBjdbmMkcWuNgcUiqz2S15bC"
+//    }
+// };
+
+//for main branch
 module.exports = {
   client: 'mysql',
   connection: {
-    host: 'mysql-kpiq',
+    host: 'mysql-qwcf',
     charset: 'utf8',
     database: "mysql",
     user: "mysql",
-    password: "Td0WgfWWHBjdbmMkcWuNgcUiqz2S15bC"
+    password: "R65ybprtJymjAilbdMWXO4H6pOlTjU1y"
    }
 };
-
-//module.exports = {
-//   client: 'mysql',
-//   connection: {
-//     host: 'mysql-wjvs',
-//     charset: 'utf8',
-//     database: "recipes",
-//     user: "root",
-//     password: "rootroot",
-//     port: "3306"
-//    }
-// };
