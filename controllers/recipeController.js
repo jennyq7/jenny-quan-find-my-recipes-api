@@ -55,7 +55,6 @@ exports.addRecipe = async (req, res) => {
         
         const newRecipe = req.body;
         newRecipe.recipe_id = uuidv4();
-        //newRecipe.recipe_image = '/images/';
         newRecipe.recipe_image = servedURL;
         const data = await knex('recipe').insert(newRecipe);
         res.status(201).json(data);
