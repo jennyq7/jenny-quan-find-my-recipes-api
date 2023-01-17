@@ -14,25 +14,14 @@ module.exports = {
    }
 };
 
+//for main branch
 // module.exports = {
 //   client: 'mysql',
 //   connection: {
-//     host: 'mysql-wjvs',
+//     host: 'mysql-qwcf',
 //     charset: 'utf8',
-//     database: "recipes",
-//     user: "root",
-//     password: "rootroot",
-//     port: "3306"
+//     database: "mysql",
+//     user: "mysql",
+//     password: "R65ybprtJymjAilbdMWXO4H6pOlTjU1y"
 //    }
 // };
-
-// module.exports = {
-//   client: 'mysql',
-//   connection: {
-//     host: '127.0.0.1',
-//     charset: 'utf8',
-//     database: "recipes",
-//     user: "root",
-//     password: "rootroot",
-//    }
-// }
