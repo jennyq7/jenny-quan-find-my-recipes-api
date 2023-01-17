@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(fileupload());
 
 app.use("/recipes", homeRoutes);
-app.use('/images', express.static('/var/lib/data'))
+app.use('/images', express.static('./public/images'))
 
 app.listen(PORT, () => {
     console.log(`test running on ${PORT}`);
