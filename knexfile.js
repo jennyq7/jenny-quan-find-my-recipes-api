@@ -25,3 +25,14 @@ module.exports = {
 //     port: "3306"
 //    }
 // };
+
+// module.exports = {
+//   client: 'mysql',
+//   connection: {
+//     host: '127.0.0.1',
+//     charset: 'utf8',
+//     database: "recipes",
+//     user: "root",
+//     password: "rootroot",
+//    }
+// }

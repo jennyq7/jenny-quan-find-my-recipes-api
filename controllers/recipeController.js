@@ -47,7 +47,6 @@ exports.addRecipe = async (req, res) => {
     try {
         let imageData = req.files.file.data;
         let imageName = req.files.file.name;
-        console.log(req.files);
         let fileName = uuidv4() + "-" + imageName;
         let actualStaticFilePath = './public/images/' + fileName;
         let servedFilePath = "/images/" + fileName;
@@ -63,7 +62,7 @@ exports.addRecipe = async (req, res) => {
         res.status(400).send(`Missing information: ${err}`);
     }
 }
-//test
+
 //function to get new added recipes
 exports.getNewRecipe = async (req, res) => {
     try {
