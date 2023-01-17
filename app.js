@@ -12,7 +12,8 @@ app.use(express.json());
 app.use(fileupload());
 
 app.use("/recipes", homeRoutes);
-app.use('/images', express.static('./public/images'))
+app.use('/images', express.static('./public/images'));
+app.use(express.urlencoded({ extended: true}));
 
 app.listen(PORT, () => {
     console.log(`test running on ${PORT}`);
