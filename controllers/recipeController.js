@@ -52,7 +52,7 @@ exports.addRecipe = async (req, res) => {
         let servedFilePath = "/images/" + fileName;
         let servedURL = 'https://recipe-box-backend.onrender.com' + servedFilePath;
         fs.writeFileSync(actualStaticFilePath, imageData);
-        
+       
         const newRecipe = req.body;
         newRecipe.recipe_id = uuidv4();
         newRecipe.recipe_image = servedURL;
