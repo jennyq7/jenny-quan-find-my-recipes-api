@@ -63,7 +63,7 @@ exports.addRecipe = async (req, res) => {
         res.status(400).send(`Missing information: ${err}`);
     }
 }
-
+//test
 //function to get new added recipes
 exports.getNewRecipe = async (req, res) => {
     try {
