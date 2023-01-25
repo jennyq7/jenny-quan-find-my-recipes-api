@@ -8,7 +8,7 @@ const fs = require("fs");
 exports.index = async (req, res) => {
     await axios.get('https://platform.fatsecret.com/rest/server.api?method=recipes.search.v2&format=json&max_results=50', {
         headers: {
-            Authorization: "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjVGQUQ4RTE5MjMwOURFRUJCNzBCMzU5M0E2MDU3OUFEMUM5NjgzNDkiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJYNjJPR1NNSjN1dTNDeldUcGdWNXJSeVdnMGsifQ.eyJuYmYiOjE2NzQ1NzYzNTIsImV4cCI6MTY3NDY2Mjc1MiwiaXNzIjoiaHR0cHM6Ly9vYXV0aC5mYXRzZWNyZXQuY29tIiwiYXVkIjoiYmFzaWMiLCJjbGllbnRfaWQiOiI3Njk3NWEzYzNmZTI0N2QyOTkxZGE4ZjEwNmM4YzhiZiIsInNjb3BlIjpbImJhc2ljIl19.WA7y9x0D5RG4nim_HwY29lGWvCI0GDf21GxNe8s5ihntLUfXVYl_QwY-heL1HXh4foxGmMbvrenB2ofG3p_66Xmgb0Q5Vg71p8aKm39J3f_sPwdC4hiThq4POFnyjsjtd317GJi9EYflkrGju6IQVuZiutaxaUvXCpbVWAI4C58V8CcXSTS1IEaBU6nsSuj0EMDTDNZD-IVou-ijOqPKGBIegYIpW7541v22-JcO6aNHjda3TIttYr27PaC8YTiX_MLrJ0331Buz4sy2O0N_kHlwC_bdCRl9cCFLP562TsGd_CREHK53kYO3H7qByiR9scVN_2XYfzi5Il4LlrGjZw"
+            Authorization: "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjVGQUQ4RTE5MjMwOURFRUJCNzBCMzU5M0E2MDU3OUFEMUM5NjgzNDkiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJYNjJPR1NNSjN1dTNDeldUcGdWNXJSeVdnMGsifQ.eyJuYmYiOjE2NzQ2NjMxODYsImV4cCI6MTY3NDc0OTU4NiwiaXNzIjoiaHR0cHM6Ly9vYXV0aC5mYXRzZWNyZXQuY29tIiwiYXVkIjoiYmFzaWMiLCJjbGllbnRfaWQiOiI3Njk3NWEzYzNmZTI0N2QyOTkxZGE4ZjEwNmM4YzhiZiIsInNjb3BlIjpbImJhc2ljIl19.BwQUuLD_424M1cyJvgzYkpi3kIj_nNuCr-4qquFd1s0sseRl5pSbJ2KXfO7eLEFVhjGT8hBssWARM1HUywyOmTs7xHxN6nCSAw1nyOyxsHscY5YkZyCHcuHsLrLs0gUy0cGiIDF2lQic4lPRBT4EzERBExPWStdd188MJr1IQbhCxyi64epGoYnXpWt_DhjySWYmKcxrLVHyHo4nypYc62EFWpDngy3nZ1Ulrg2uk2fmoUVlP6oJgHoPwV1-dNbLNCEO_ltOexnRggQGpmC2tjcbfLKsOlqBOsNKG8415uVV1nmaD4TreF4UMVlvnoyP1run0vwDM0Q2KSx3vZNPDA"
         }
     }
     ).then(response => {
@@ -21,7 +21,7 @@ exports.index = async (req, res) => {
 exports.oneRecipe = async (req, res) => {
     await axios.get(`https://platform.fatsecret.com/rest/server.api?method=recipe.get&format=json&recipe_id=${req.params.id}`, {
         headers: {
-            Authorization: "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjVGQUQ4RTE5MjMwOURFRUJCNzBCMzU5M0E2MDU3OUFEMUM5NjgzNDkiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJYNjJPR1NNSjN1dTNDeldUcGdWNXJSeVdnMGsifQ.eyJuYmYiOjE2NzQ1NzYzNTIsImV4cCI6MTY3NDY2Mjc1MiwiaXNzIjoiaHR0cHM6Ly9vYXV0aC5mYXRzZWNyZXQuY29tIiwiYXVkIjoiYmFzaWMiLCJjbGllbnRfaWQiOiI3Njk3NWEzYzNmZTI0N2QyOTkxZGE4ZjEwNmM4YzhiZiIsInNjb3BlIjpbImJhc2ljIl19.WA7y9x0D5RG4nim_HwY29lGWvCI0GDf21GxNe8s5ihntLUfXVYl_QwY-heL1HXh4foxGmMbvrenB2ofG3p_66Xmgb0Q5Vg71p8aKm39J3f_sPwdC4hiThq4POFnyjsjtd317GJi9EYflkrGju6IQVuZiutaxaUvXCpbVWAI4C58V8CcXSTS1IEaBU6nsSuj0EMDTDNZD-IVou-ijOqPKGBIegYIpW7541v22-JcO6aNHjda3TIttYr27PaC8YTiX_MLrJ0331Buz4sy2O0N_kHlwC_bdCRl9cCFLP562TsGd_CREHK53kYO3H7qByiR9scVN_2XYfzi5Il4LlrGjZw"
+            Authorization: "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjVGQUQ4RTE5MjMwOURFRUJCNzBCMzU5M0E2MDU3OUFEMUM5NjgzNDkiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJYNjJPR1NNSjN1dTNDeldUcGdWNXJSeVdnMGsifQ.eyJuYmYiOjE2NzQ2NjMxODYsImV4cCI6MTY3NDc0OTU4NiwiaXNzIjoiaHR0cHM6Ly9vYXV0aC5mYXRzZWNyZXQuY29tIiwiYXVkIjoiYmFzaWMiLCJjbGllbnRfaWQiOiI3Njk3NWEzYzNmZTI0N2QyOTkxZGE4ZjEwNmM4YzhiZiIsInNjb3BlIjpbImJhc2ljIl19.BwQUuLD_424M1cyJvgzYkpi3kIj_nNuCr-4qquFd1s0sseRl5pSbJ2KXfO7eLEFVhjGT8hBssWARM1HUywyOmTs7xHxN6nCSAw1nyOyxsHscY5YkZyCHcuHsLrLs0gUy0cGiIDF2lQic4lPRBT4EzERBExPWStdd188MJr1IQbhCxyi64epGoYnXpWt_DhjySWYmKcxrLVHyHo4nypYc62EFWpDngy3nZ1Ulrg2uk2fmoUVlP6oJgHoPwV1-dNbLNCEO_ltOexnRggQGpmC2tjcbfLKsOlqBOsNKG8415uVV1nmaD4TreF4UMVlvnoyP1run0vwDM0Q2KSx3vZNPDA"
         }
     }
     ).then(response => {
@@ -95,7 +95,7 @@ exports.storedRecipes = (req, res) => {
         for (i = 0; i < externalId.length; i++) {
             promises.push(axios.get(`https://platform.fatsecret.com/rest/server.api?method=recipe.get&format=json&recipe_id=${externalId[i].recipe_id}`, {
                 headers: {
-                    Authorization: "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjVGQUQ4RTE5MjMwOURFRUJCNzBCMzU5M0E2MDU3OUFEMUM5NjgzNDkiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJYNjJPR1NNSjN1dTNDeldUcGdWNXJSeVdnMGsifQ.eyJuYmYiOjE2NzQ1NzYzNTIsImV4cCI6MTY3NDY2Mjc1MiwiaXNzIjoiaHR0cHM6Ly9vYXV0aC5mYXRzZWNyZXQuY29tIiwiYXVkIjoiYmFzaWMiLCJjbGllbnRfaWQiOiI3Njk3NWEzYzNmZTI0N2QyOTkxZGE4ZjEwNmM4YzhiZiIsInNjb3BlIjpbImJhc2ljIl19.WA7y9x0D5RG4nim_HwY29lGWvCI0GDf21GxNe8s5ihntLUfXVYl_QwY-heL1HXh4foxGmMbvrenB2ofG3p_66Xmgb0Q5Vg71p8aKm39J3f_sPwdC4hiThq4POFnyjsjtd317GJi9EYflkrGju6IQVuZiutaxaUvXCpbVWAI4C58V8CcXSTS1IEaBU6nsSuj0EMDTDNZD-IVou-ijOqPKGBIegYIpW7541v22-JcO6aNHjda3TIttYr27PaC8YTiX_MLrJ0331Buz4sy2O0N_kHlwC_bdCRl9cCFLP562TsGd_CREHK53kYO3H7qByiR9scVN_2XYfzi5Il4LlrGjZw"
+                    Authorization: "Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjVGQUQ4RTE5MjMwOURFRUJCNzBCMzU5M0E2MDU3OUFEMUM5NjgzNDkiLCJ0eXAiOiJhdCtqd3QiLCJ4NXQiOiJYNjJPR1NNSjN1dTNDeldUcGdWNXJSeVdnMGsifQ.eyJuYmYiOjE2NzQ2NjMxODYsImV4cCI6MTY3NDc0OTU4NiwiaXNzIjoiaHR0cHM6Ly9vYXV0aC5mYXRzZWNyZXQuY29tIiwiYXVkIjoiYmFzaWMiLCJjbGllbnRfaWQiOiI3Njk3NWEzYzNmZTI0N2QyOTkxZGE4ZjEwNmM4YzhiZiIsInNjb3BlIjpbImJhc2ljIl19.BwQUuLD_424M1cyJvgzYkpi3kIj_nNuCr-4qquFd1s0sseRl5pSbJ2KXfO7eLEFVhjGT8hBssWARM1HUywyOmTs7xHxN6nCSAw1nyOyxsHscY5YkZyCHcuHsLrLs0gUy0cGiIDF2lQic4lPRBT4EzERBExPWStdd188MJr1IQbhCxyi64epGoYnXpWt_DhjySWYmKcxrLVHyHo4nypYc62EFWpDngy3nZ1Ulrg2uk2fmoUVlP6oJgHoPwV1-dNbLNCEO_ltOexnRggQGpmC2tjcbfLKsOlqBOsNKG8415uVV1nmaD4TreF4UMVlvnoyP1run0vwDM0Q2KSx3vZNPDA"
                 }
             }).then(response => {
                 savedRecipe.push(response.data);
