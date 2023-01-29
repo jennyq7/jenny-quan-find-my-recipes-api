@@ -14,14 +14,3 @@ module.exports = {
    }
 };
 
-//for main branch
-// module.exports = {
-//   client: 'mysql',
-//   connection: {
-//     host: 'mysql-qwcf',
-//     charset: 'utf8',
-//     database: "mysql",
-//     user: "mysql",
-//     password: "R65ybprtJymjAilbdMWXO4H6pOlTjU1y"
-//    }
-// };
