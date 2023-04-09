@@ -6,9 +6,9 @@
 module.exports = {
   client: 'mysql',
   connection: {
-    host: 'recipe-box-db',
+    host: 'recipe-box-db.mysql.database.azure.com',
     charset: 'utf8',
-    database: "mysql",
+    database: "recipe-box-db",
     user: "jenny",
     password: "ARqTLhgv6KXF6BA!"
    }
