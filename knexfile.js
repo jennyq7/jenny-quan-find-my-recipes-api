@@ -3,24 +3,24 @@
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
-module.exports = {
-  client: 'mysql',
-  connection: {
-    host: 'mysqltestdb123.mysql.database.azure.com',
-    charset: 'utf8',
-    database: "quickstartdb",
-    user: "mysqluser1",
-    password: "T*6g2xDF%"
-   }
-};
-
 // module.exports = {
 //   client: 'mysql',
 //   connection: {
-//     host: 'mysql-kpiq',
+//     host: 'mysqltestdb123.mysql.database.azure.com',
 //     charset: 'utf8',
-//     database: "mysql",
-//     user: "mysql",
-//     password: "Td0WgfWWHBjdbmMkcWuNgcUiqz2S15bC"
+//     database: "quickstartdb",
+//     user: "mysqluser1",
+//     password: "T*6g2xDF%"
 //    }
 // };
+
+module.exports = {
+  client: 'mysql',
+  connection: {
+    host: 'mysql-kpiq',
+    charset: 'utf8',
+    database: "mysql",
+    user: "mysql",
+    password: "Td0WgfWWHBjdbmMkcWuNgcUiqz2S15bC"
+   }
+};
