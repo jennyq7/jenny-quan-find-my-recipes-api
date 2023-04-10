@@ -6,11 +6,11 @@
 module.exports = {
   client: 'mysql',
   connection: {
-    host: 'recipe-box-db.mysql.database.azure.com',
+    host: 'mysqltestdb123.mysql.database.azure.com',
     charset: 'utf8',
-    database: "mysql",
-    user: "jenny",
-    password: "ARqTLhgv6KXF6BA!"
+    database: "quickstartdb",
+    user: "mysqluser1",
+    password: "T*6g2xDF%"
    }
 };
 
