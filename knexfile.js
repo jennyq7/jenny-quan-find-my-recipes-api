@@ -3,6 +3,7 @@
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
  */
+//db for azure project
 // module.exports = {
 //   client: 'mysql',
 //   connection: {
@@ -14,6 +15,7 @@
 //    }
 // };
 
+//db for Render deployment
 module.exports = {
   client: 'mysql',
   connection: {
