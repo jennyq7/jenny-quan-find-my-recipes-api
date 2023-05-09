@@ -48,7 +48,8 @@ exports.addRecipe = async (req, res) => {
         let fileName = uuidv4() + "-" + imageName;
         let actualStaticFilePath = './public/images/' + fileName;
         let servedFilePath = "/images/" + fileName;
-        let servedURL = 'https://recipe-box-api-published.onrender.com' + servedFilePath;
+        // let servedURL = 'https://recipe-box-api-published.onrender.com' + servedFilePath;
+        let servedURL = 'recipe-box-app.azurewebsites.net' + servedFilePath;
         fs.writeFileSync(actualStaticFilePath, imageData);
        
         const newRecipe = req.body;
