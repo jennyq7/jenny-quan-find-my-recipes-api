@@ -15,14 +15,3 @@ module.exports = {
    }
 };
 //
-//db for Render deployment
-// module.exports = {
-//   client: 'mysql',
-//   connection: {
-//     host: 'mysql-kpiq',
-//     charset: 'utf8',
-//     database: "mysql",
-//     user: "mysql",
-//     password: "Td0WgfWWHBjdbmMkcWuNgcUiqz2S15bC"
-//    }
-// };
